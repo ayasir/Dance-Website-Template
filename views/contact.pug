@@ -1,0 +1,47 @@
+//- contact.pug
+
+extends base.pug 
+
+block scripts
+    script(src='/static/index.js')
+
+//- block style
+//-     style
+//-         //- include ../static/style.css
+
+block content
+    if flag
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Hurray!</strong> You are registered successfully.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    //- div.alert.alert-success
+    //-     | User Registered successfully!
+    //- mixin alert-ix-success(message, icon)
+    //-     unless icon
+    //-         - var icon = "ok-sign"
+    //-         +alert-ix("success", message, icon)
+    div#form-heading
+        | Contact Us
+    div.form-group.col-lg-6.container
+        form(action="/contact", method="POST" class="form-registration")
+            div#name
+                
+                input(type="text", name="name" placeholder="Name" class="form-control form-control-lg")
+            div#email
+                
+                input(type="email", name="email" placeholder="Email" class="form-control form-control-lg")
+            div#phone
+                
+                input(type="number", name="phone" placeholder="Phone" class="form-control form-control-lg")
+            div#password
+                
+                input(type="password", name="password" placeholder="Password" class="form-control form-control-lg")
+            div#submit
+                input(type="submit", value="Submit" class="btn btn-primary btn-lg" id="submit")
+            
+            
+            
+            

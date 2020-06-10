@@ -1,0 +1,49 @@
+//- index.pug
+doctype html
+html
+  head
+    title
+      | Dance Academy
+    style
+      include ../static/style.css
+      
+  body
+    nav#navbar
+      div#logo
+        img(src="/static/logo1.png", alt="logo")
+      ul
+        li #[a(href='/index.pug') Home]
+        li #[a(href='/about.pug') About Us]
+        li #[a(href='/services.pug') Services]
+        li #[a(href='/explore.pug') Explore]
+        li #[a(href='/contact.pug') Contact Us]
+    
+    section#intro
+       div 
+        | Welcome to my Dance Academy!
+       div#sub-intro 
+        | First step towards the dancing world.
+    section#mission
+      div.misson-heading
+        | Our Mission  
+      div.card
+        | mission 1 
+        img(src="/static/logo1.png", alt="mission1")
+      div.card
+        | mission 2
+        img(src="/static/logo1.png", alt="mission1")
+      div.card
+        | mission 3 
+        img(src="/static/logo1.png", alt="mission1")
+    section#sponsors
+      div.sponsor-heading
+        | Our sponsors
+      div.sponsors-img
+        img(src="/static/apple1.png", alt="Apple")
+      div.sponsors-img
+        img(src="/static/applestore.png", alt="Apple")
+      div.sponsors-img
+        img(src="/static/apple2.png", alt="Apple")
+    
+    script
+      include ../static/script.js
